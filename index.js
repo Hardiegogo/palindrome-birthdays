@@ -11,11 +11,7 @@ function checkPalindrome(str){
     return false;
 }
 
-const date={
-    day:11,
-    month:11,
-    year:2021
-}
+
 
 function useDate(date){
     return newDate={
@@ -109,3 +105,38 @@ function nextPalindrome(date){
     }
     
 }
+
+
+const birthdate=document.querySelector('#birthdate');
+const checkButton=document.querySelector('#check-btn')
+const output=document.querySelector('.output-area')
+
+checkButton.addEventListener('click',()=>{
+    output.innerHTML = "";
+    if (birthdate.value) {
+      output.innerHTML = "";
+      let dateArr = birthdate.value.split("-");
+      let flag = 0;
+
+      const date = {
+        day: Number(dateArr[2]),
+        month: Number(dateArr[1]),
+        year: Number(dateArr[0]),
+      };
+
+      const resultList = checkPalindromeAllDates(useDate(date));
+      for (let i = 0; i < resultList.length; i++) {
+        if (resultList[i]) {
+          output.innerHTML = "Yay your birthday is a palindrome!😎😎";
+          flag = 1;
+        }
+      }
+
+      if (!flag) {
+        let newPalindrome = nextPalindrome(date);
+        let dateStr = `${newPalindrome[1].day}-${newPalindrome[1].month}-${newPalindrome[1].year}`;
+        output.innerHTML = `Next palindrome date is ${dateStr}, you missed by ${newPalindrome[0]} days.`;
+      }
+    }
+    })
+

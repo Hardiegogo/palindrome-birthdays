@@ -1,3 +1,59 @@
 body{
     text-align: center;
+    background-color: #0A043C;
+    color: #FFE3D8;
+    padding: 1.5rem;
+}
+
+.app{
+    background-color: #03506F;
+    width: fit-content;
+    margin: auto;
+    padding: 2rem;
+    max-width: 350px;
+    border-radius: 10px;
+    border:none;
+    width: 80%;
+    
+    margin-top: 15vh;
+    
+    input,label{
+        padding: 0.5em 1em;
+        border-radius: 10px;
+        border:none;
+        display:block;
+        margin: 0.5em auto;
+    }
+    #check-btn{
+        display: block;
+        margin: 1em auto;
+        padding: 0.3rem 2rem;
+        font-size: 1em;
+        background-color: #FFE3D8;
+        color: #0A043C;
+        border-radius: 10px;
+        border:none;
+    }
+
+    .output-area{
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
+}
+footer {
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+
+    img {
+        object-fit: contain;
+        width: 10vw;
+        margin: 1rem;
+        max-width: 40px;
+    }
 }
